@@ -1,0 +1,29 @@
+{
+  "name": "app-cli-weather",
+  "version": "1.0.0",
+  "description": "CLI for getting weather",
+  "keywords": [
+    "cli",
+    "weather"
+  ],
+  "author": "Vladimir Artyukhov",
+  "license": "ISC",
+  "main": "src/weather.js",
+  "bin": {
+    "weather": "src/weather.js"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.24.0"
+  },
+  "homepage": "https://github.com/artman-training-projects/purpleschool-nodejs#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/artman-training-projects/purpleschool-nodejs.git"
+  },
+  "bugs": {
+    "url": "https://github.com/artman-training-projects/purpleschool-nodejs/issues"
+  }
+}
