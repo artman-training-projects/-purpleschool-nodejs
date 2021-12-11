@@ -1,16 +1,22 @@
 #!/usr/bin/env node
 
 import { getArgs } from "./helpers/args.js";
-import { saveKeyValue } from "./services/storage.service.js";
+import { saveKeyValue, TOKEN_DICTIONARY } from "./services/storage.service.js";
 import {
 	printerError,
 	printerSuccess,
 	printHelp,
 } from "./services/log.service.js";
+import { getWeather } from "./services/api.service.js";
 
 const saveToken = async (token) => {
+	if (!token.length) {
+		printerError("Токен не передан");
+		return;
+	}
+
 	try {
-		await saveKeyValue("token", token);
+		await saveKeyValue(TOKEN_DICTIONARY.token, token);
 		printerSuccess("Токен сохранён");
 	} catch (e) {
 		printerError(e.message);
@@ -32,7 +38,7 @@ const initCLI = () => {
 		return saveToken(args.t);
 	}
 
-	// show weather
+	getWeather("moscow");
 };
 
 initCLI();
