@@ -1,0 +1,19 @@
+{
+	"name": "dashboard-api",
+	"version": "1.0.0",
+	"description": "Полный курс по написанию приложений на Node.js и построению масштабируемой и поддерживаемой архитектуры!",
+	"author": "Vladimir Artyukhov",
+	"license": "ISC",
+	"main": "index.js",
+	"type": "module",
+	"dependencies": {},
+	"devDependencies": {},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/artman-training-projects/purpleschool-nodejs.git"
+	},
+	"homepage": "https://github.com/artman-training-projects/purpleschool-nodejs#readme"
+}
