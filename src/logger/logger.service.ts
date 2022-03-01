@@ -26,6 +26,7 @@ export class LoggerService implements ILogger {
 	}
 
 	error(...args: unknown[]): void {
+		// отправка в sentry / rollbar
 		this.logger.error(...args);
 	}
 }
