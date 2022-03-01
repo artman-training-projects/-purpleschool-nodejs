@@ -11,6 +11,7 @@
 
 		/* Emit */
 		"outDir": "./dist",
+		"sourceMap": true,
 		"removeComments": true,
 
 		/* Interop Constraints */
