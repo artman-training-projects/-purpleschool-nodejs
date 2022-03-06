@@ -10,10 +10,10 @@ export class LoggerService implements ILogger {
 
 	constructor() {
 		this.logger = new Logger({
-			displayLoggerName: false,
 			displayInstanceName: false,
-			displayFunctionName: false,
+			displayLoggerName: false,
 			displayFilePath: 'hidden',
+			displayFunctionName: false,
 		});
 	}
 
@@ -21,12 +21,12 @@ export class LoggerService implements ILogger {
 		this.logger.info(...args);
 	}
 
-	warn(...args: unknown[]): void {
-		this.logger.warn(...args);
-	}
-
 	error(...args: unknown[]): void {
 		// отправка в sentry / rollbar
 		this.logger.error(...args);
+	}
+
+	warn(...args: unknown[]): void {
+		this.logger.warn(...args);
 	}
 }
