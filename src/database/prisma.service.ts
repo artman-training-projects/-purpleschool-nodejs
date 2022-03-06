@@ -16,9 +16,9 @@ export class PrismaService {
 		try {
 			await this.client.$connect();
 			this.logger.log('[PrismaService] успешно подключились к БД');
-		} catch (err) {
-			if (err instanceof Error) {
-				this.logger.error('[PrismaService] ошибка подключения к БД' + err.message);
+		} catch (error) {
+			if (error instanceof Error) {
+				this.logger.error('[PrismaService] ошибка подключения к БД' + error.message);
 			}
 		}
 	}
