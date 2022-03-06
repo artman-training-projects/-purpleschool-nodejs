@@ -8,6 +8,8 @@ import { HTTPError } from '../errors/http-error.class';
 import { ILogger } from '../logger/logger.interface';
 
 import { IUserController } from './user.controller.interface';
+import { UserLoginDto } from './dto/user-login.dto';
+import { UserRegisterDto } from './dto/user-register.dto';
 
 class User {}
 
@@ -23,12 +25,14 @@ export class UserController extends BaseController implements IUserController {
 		]);
 	}
 
-	login(req: Request, res: Response, next: NextFunction): void {
+	login(req: Request<{}, {}, UserLoginDto>, res: Response, next: NextFunction): void {
+		console.log(req.body);
 		users.push(new User());
 		next(new HTTPError(401, 'Ошибка авторизации', 'login'));
 	}
 
-	register(req: Request, res: Response, next: NextFunction): void {
+	register(req: Request<{}, {}, UserRegisterDto>, res: Response, next: NextFunction): void {
+		console.log(req.body);
 		this.ok(res, 'register');
 	}
 }
