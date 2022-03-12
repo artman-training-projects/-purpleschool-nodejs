@@ -9,10 +9,10 @@ import { UserLoginDto } from './dto/user-login.dto';
 import { UserRegisterDto } from './dto/user-register.dto';
 import { User } from './user.entity';
 import { IUsersRepository } from './users.repository.interface';
-import { IUserService } from './users.service.interface';
+import { IUsersService } from './users.service.interface';
 
 @injectable()
-export class UserService implements IUserService {
+export class UserService implements IUsersService {
 	constructor(
 		@inject(TYPES.ConfigService) private configService: IConfigService,
 		@inject(TYPES.UsersRepository) private usersRepository: IUsersRepository,
